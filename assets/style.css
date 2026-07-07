@@ -1,0 +1,165 @@
+/* 西藏脈動瑜伽 官方網站 共用樣式 */
+:root {
+  --bg: #faf7f2;
+  --ink: #2b2620;
+  --muted: #7a7166;
+  --line: #e5ddd0;
+  --accent: #8a2b2b;      /* 主色：深紅 */
+  --accent-soft: #f3e6e0;
+  --card: #ffffff;
+  --red: #c0392b;
+  --green: #277a4f;
+  --blue: #2e5fa3;
+  --yellow: #c9971c;
+  --shine: #8f8f9e;
+  --purple: #6d4a9e;
+  --maxw: 1080px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: "Noto Serif TC", "PMingLiU", Georgia, serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.85;
+  letter-spacing: 0.02em;
+}
+img { max-width: 100%; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* 導覽列 */
+header.site {
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+  position: sticky; top: 0; z-index: 50;
+}
+.navwrap {
+  max-width: var(--maxw); margin: 0 auto; padding: 0 1.2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 0.5rem; min-height: 64px;
+}
+.brand { font-size: 1.25rem; font-weight: 700; color: var(--ink); }
+.brand small { display: block; font-size: 0.7rem; color: var(--muted); font-weight: 400; letter-spacing: 0.15em; }
+nav.main { display: flex; flex-wrap: wrap; gap: 0.2rem; }
+nav.main a {
+  padding: 0.45rem 0.7rem; border-radius: 6px;
+  color: var(--ink); font-size: 0.95rem; white-space: nowrap;
+}
+nav.main a:hover { background: var(--accent-soft); text-decoration: none; }
+nav.main a.active { background: var(--accent); color: #fff; }
+nav.main a.lang { color: var(--muted); font-size: 0.85rem; }
+
+/* 主體 */
+main { max-width: var(--maxw); margin: 0 auto; padding: 2.5rem 1.2rem 4rem; }
+.hero {
+  text-align: center; padding: 3.5rem 1rem 3rem;
+  background: linear-gradient(180deg, #f5efe4, var(--bg));
+  border-radius: 12px; margin-bottom: 2.5rem;
+}
+.hero h1 { font-size: 2.3rem; letter-spacing: 0.12em; margin-bottom: 0.8rem; }
+.hero p.sub { color: var(--muted); font-size: 1.05rem; max-width: 42em; margin: 0 auto; }
+.hero .waves { font-size: 1.4rem; letter-spacing: 0.5em; margin-top: 1.2rem; }
+
+h1.page { font-size: 1.9rem; letter-spacing: 0.1em; margin-bottom: 0.4rem; }
+p.lead { color: var(--muted); margin-bottom: 2rem; }
+h2 { font-size: 1.35rem; margin: 2.2rem 0 0.8rem; padding-left: 0.6rem; border-left: 4px solid var(--accent); }
+h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+p { margin-bottom: 0.9rem; }
+ul, ol { margin: 0 0 1rem 1.6rem; }
+
+blockquote {
+  margin: 1.2rem 0; padding: 0.9rem 1.2rem;
+  background: var(--accent-soft); border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0; font-size: 1.02rem;
+}
+blockquote cite { display: block; margin-top: 0.4rem; font-size: 0.85rem; color: var(--muted); font-style: normal; }
+
+/* 卡片格 */
+.grid { display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin: 1.5rem 0; }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+  padding: 1.4rem 1.5rem;
+}
+.card h3 { margin-top: 0; }
+.card .tag { font-size: 0.78rem; color: var(--muted); letter-spacing: 0.1em; }
+.card a.more { font-size: 0.9rem; }
+
+/* 表格 */
+.tablewrap { overflow-x: auto; margin: 1.2rem 0; }
+table { border-collapse: collapse; width: 100%; background: var(--card); font-size: 0.93rem; }
+th, td { border: 1px solid var(--line); padding: 0.55rem 0.8rem; text-align: left; white-space: nowrap; }
+th { background: #f2ecdf; }
+td.wrap, th.wrap { white-space: normal; }
+
+/* 色波標記 */
+.w-red    { color: var(--red);    font-weight: 700; }
+.w-green  { color: var(--green);  font-weight: 700; }
+.w-blue   { color: var(--blue);   font-weight: 700; }
+.w-yellow { color: var(--yellow); font-weight: 700; }
+.w-shine  { color: var(--shine);  font-weight: 700; }
+.w-purple { color: var(--purple); font-weight: 700; }
+.waveband { display: inline-block; width: 0.85em; height: 0.85em; border-radius: 50%; margin-right: 0.4em; vertical-align: baseline; }
+
+/* 表單雛形 */
+form.proto { max-width: 560px; }
+form.proto label { display: block; margin: 1rem 0 0.3rem; font-weight: 700; font-size: 0.95rem; }
+form.proto input, form.proto select, form.proto textarea {
+  width: 100%; padding: 0.6rem 0.8rem; border: 1px solid var(--line);
+  border-radius: 8px; font: inherit; background: var(--card);
+}
+button.btn, a.btn {
+  display: inline-block; margin-top: 1.4rem; padding: 0.7rem 2rem;
+  background: var(--accent); color: #fff; border: none; border-radius: 8px;
+  font: inherit; font-size: 1rem; cursor: pointer;
+}
+button.btn:hover, a.btn:hover { opacity: 0.88; text-decoration: none; }
+.notice {
+  margin: 1.2rem 0; padding: 0.7rem 1rem; font-size: 0.88rem;
+  background: #fdf6e3; border: 1px dashed #d9c780; border-radius: 8px; color: #7a6520;
+}
+
+/* 商品卡 */
+.price { font-size: 1.15rem; font-weight: 700; color: var(--accent); margin: 0.5rem 0; }
+
+/* 頁腳 */
+footer.site {
+  border-top: 1px solid var(--line); background: var(--card);
+  text-align: center; padding: 2rem 1rem; color: var(--muted); font-size: 0.85rem;
+}
+/* ===== 輕量特效 ===== */
+html { scroll-behavior: smooth; }
+
+/* hero 六色波漸層流動 */
+.hero {
+  background: linear-gradient(120deg, #f7ece4, #eaf3ec, #e8eef7, #f7f2e2, #f0f0f4, #efe9f5, #f7ece4);
+  background-size: 400% 400%;
+  animation: waveflow 24s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+@keyframes waveflow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.hero > * { position: relative; z-index: 1; }
+canvas.sparks { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+
+/* 卡片懸停浮起 */
+.card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(60, 40, 20, 0.1); }
+
+/* 捲動淡入 */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.shown { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero { animation: none; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .card { transition: none; }
+}
+
+@media (max-width: 640px) {
+  .hero h1 { font-size: 1.6rem; }
+  .navwrap { padding-bottom: 0.6rem; }
+}
