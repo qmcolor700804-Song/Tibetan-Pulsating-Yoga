@@ -26,37 +26,46 @@
 
 <main>
   <h1 class="page">學員註冊</h1>
-  <p class="lead">報名課程、加入西藏脈動的學習</p>
+  <p class="lead">建立學員資料，加入西藏脈動的學習（課程介紹請見<a href="shop.html">商城</a>）</p>
 
-  <h2>課程類型</h2>
-  <div class="grid">
-    <div class="card"><h3>入門課</h3><p>認識脈動的基本原理與 New Mind 工作，含讀眼體驗。適合零基礎。</p></div>
-    <div class="card"><h3>色波課程</h3><p>紅波、綠波、藍波、黃波、閃亮波、紫波——每波四個器官的深度工作。</p></div>
-    <div class="card"><h3>外點工作坊</h3><p>各色波外點的接觸工作訓練，見 <a href="eye-points.html">眼外點</a>。</p></div>
-    <div class="card"><h3>讀眼訓練</h3><p>需具備脈動基礎，依色波順序推進的讀眼術課程。</p></div>
-  </div>
-
-  <h2>報名表</h2>
-  <p class="notice">此為報名介面雛形：送出功能尚未連接後端，正式上線後將接表單服務（Google Forms／Line 官方帳號等），屆時此表單直接送出即可。</p>
+  <h2>學員資料</h2>
+  <p class="notice">此為註冊介面雛形：送出功能尚未連接後端，正式上線後將接表單／會員服務，屆時此表單直接送出即可。</p>
   <!-- TODO(擴充點): 接表單服務時，將 form 的 action 指向服務端點並移除 onsubmit，或整段替換為服務的嵌入碼；name 屬性已備妥 -->
-  <form class="proto" onsubmit="alert('線上報名即將開放，敬請期待。'); return false;">
-    <label for="name">姓名</label>
-    <input id="name" name="name" type="text" placeholder="您的姓名" required>
-    <label for="email">Email</label>
+  <form class="proto" onsubmit="alert('線上註冊即將開放，敬請期待。'); return false;">
+    <h3>基本資料</h3>
+    <label for="lastname">姓氏 *</label>
+    <input id="lastname" name="lastname" type="text" placeholder="例：王" required>
+    <label for="firstname">名字 *</label>
+    <input id="firstname" name="firstname" type="text" placeholder="例：小明" required>
+    <label for="email">電子郵件 *</label>
     <input id="email" name="email" type="email" placeholder="you@example.com" required>
-    <label for="phone">聯絡電話</label>
-    <input id="phone" name="phone" type="tel" placeholder="09xx-xxx-xxx">
-    <label for="course">想報名的課程</label>
-    <select id="course" name="course">
-      <option>入門課</option>
-      <option>色波課程</option>
-      <option>外點工作坊</option>
-      <option>讀眼訓練</option>
-      <option>個案 session</option>
+    <label for="phone">電話（含國碼）</label>
+    <input id="phone" name="phone" type="tel" placeholder="+886 9xxxxxxxx">
+    <label for="mobile">手機</label>
+    <input id="mobile" name="mobile" type="tel" placeholder="09xx-xxx-xxx">
+
+    <h3>住址</h3>
+    <label for="country">國家／地區</label>
+    <select id="country" name="country">
+      <option>台灣</option>
+      <option>香港</option>
+      <option>馬來西亞</option>
+      <option>新加坡</option>
+      <option>其他</option>
     </select>
+    <label for="city">城市</label>
+    <input id="city" name="city" type="text" placeholder="例：台北市">
+    <label for="postal">郵遞區號</label>
+    <input id="postal" name="postal" type="text" placeholder="例：106">
+    <label for="address1">地址</label>
+    <input id="address1" name="address1" type="text" placeholder="路名、巷弄、門牌">
+    <label for="address2">地址（第二行，選填）</label>
+    <input id="address2" name="address2" type="text">
+
+    <h3>其他</h3>
     <label for="msg">想對我們說的話（選填）</label>
     <textarea id="msg" name="msg" rows="4" placeholder="學習動機、身體狀況、想了解的問題……"></textarea>
-    <button class="btn" type="submit">送出報名</button>
+    <button class="btn" type="submit">送出註冊</button>
   </form>
 
   <h2>聯絡方式</h2>
