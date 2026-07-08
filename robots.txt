@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qmcolor700804-song.github.io/Tibetan-Pulsating-Yoga/sitemap.xml
